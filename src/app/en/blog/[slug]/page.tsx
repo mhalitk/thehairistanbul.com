@@ -1,14 +1,14 @@
 import BlogPost from '@/components/blog/BlogPost';
 import { blogPosts } from '@/content/blog/en';
+import type { BlogPost as BlogPostType } from '@/types/blog';
 
-interface BlogPostPageProps {
-  params: {
+type BlogPostPageProps = Promise<{
     slug: string;
-  };
-}
+}>;
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find((post) => post.slug === params.slug) || null;
+export default async function BlogPostPage({ params }: { params: BlogPostPageProps }) {
+  const { slug } = await params;
+  const post = blogPosts.find((post: BlogPostType) => post.slug === slug) || null;
 
   return (
     <BlogPost

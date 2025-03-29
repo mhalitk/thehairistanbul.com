@@ -87,7 +87,7 @@ export default function GalleryPage() {
 
         <div className="mt-16 text-center">
           <p className="text-sm text-gray-500">
-            Note: Results may vary from person to person. Each patient's outcome depends on various factors including their individual characteristics and adherence to post-operative care instructions.
+            Note: Results may vary from person to person. Each patient&apos;s outcome depends on various factors including their individual characteristics and adherence to post-operative care instructions.
           </p>
         </div>
       </div>

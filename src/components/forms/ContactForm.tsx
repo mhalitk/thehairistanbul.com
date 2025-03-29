@@ -26,17 +26,19 @@ export default function ContactForm({ lang }: ContactFormProps) {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
       // TODO: Implement form submission logic
+      console.log('Form data to be submitted:', formData);
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulated API call
       setSubmitStatus('success');
       reset();
-    } catch (error) {
+    } catch (err) {
       setSubmitStatus('error');
+      console.error('Form submission error:', err);
     } finally {
       setIsSubmitting(false);
     }
