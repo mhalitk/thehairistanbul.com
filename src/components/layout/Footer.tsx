@@ -40,7 +40,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <ul className="mt-4 space-y-2 text-sm text-gray-400">
               <li>Istanbul, Turkey</li>
-              <li>Phone: +90 XXX XXX XX XX</li>
+              <li>Phone: +90 541 951 99 65</li>
               <li>Email: info@thehairistanbul.com</li>
             </ul>
           </div>

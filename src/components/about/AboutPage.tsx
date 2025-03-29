@@ -36,15 +36,6 @@ export default function AboutPage({ content }: AboutPageProps) {
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-blue-100/20">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <div className="mb-8">
-              <Image
-                src="/logo.svg"
-                alt="The Hair Istanbul Logo"
-                width={200}
-                height={60}
-                className="h-12 w-auto"
-              />
-            </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               {content.title}
             </h1>

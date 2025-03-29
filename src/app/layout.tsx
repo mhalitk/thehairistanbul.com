@@ -24,6 +24,7 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <div className="h-16" />
           <Footer />
         </div>
       </body>

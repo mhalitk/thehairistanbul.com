@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 
 type FormData = {
   name: string;
-  email: string;
   phone: string;
   country: string;
   message: string;
@@ -31,9 +30,18 @@ export default function ContactForm({ lang }: ContactFormProps) {
     setSubmitStatus('idle');
 
     try {
-      // TODO: Implement form submission logic
-      console.log('Form data to be submitted:', formData);
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulated API call
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setSubmitStatus('success');
       reset();
     } catch (err) {
@@ -48,7 +56,6 @@ export default function ContactForm({ lang }: ContactFormProps) {
     en: {
       title: 'Contact Us',
       name: 'Name',
-      email: 'Email',
       phone: 'Phone',
       country: 'Country',
       message: 'Message',
@@ -56,12 +63,10 @@ export default function ContactForm({ lang }: ContactFormProps) {
       success: 'Thank you for your message. We will contact you soon!',
       error: 'Something went wrong. Please try again.',
       required: 'This field is required',
-      invalidEmail: 'Please enter a valid email address',
     },
     ru: {
       title: 'Свяжитесь с нами',
       name: 'Имя',
-      email: 'Email',
       phone: 'Телефон',
       country: 'Страна',
       message: 'Сообщение',
@@ -69,7 +74,6 @@ export default function ContactForm({ lang }: ContactFormProps) {
       success: 'Спасибо за ваше сообщение. Мы свяжемся с вами в ближайшее время!',
       error: 'Что-то пошло не так. Пожалуйста, попробуйте еще раз.',
       required: 'Это поле обязательно для заполнения',
-      invalidEmail: 'Пожалуйста, введите корректный email адрес',
     },
   };
 
@@ -85,31 +89,10 @@ export default function ContactForm({ lang }: ContactFormProps) {
           type="text"
           id="name"
           {...register('name', { required: t.required })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-3 px-4"
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-        )}
-      </div>
-
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-          {t.email}
-        </label>
-        <input
-          type="email"
-          id="email"
-          {...register('email', {
-            required: t.required,
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: t.invalidEmail,
-            },
-          })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-        />
-        {errors.email && (
-          <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
         )}
       </div>
 
@@ -121,7 +104,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           type="tel"
           id="phone"
           {...register('phone', { required: t.required })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-3 px-4"
         />
         {errors.phone && (
           <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -136,7 +119,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           type="text"
           id="country"
           {...register('country', { required: t.required })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-3 px-4"
         />
         {errors.country && (
           <p className="mt-1 text-sm text-red-600">{errors.country.message}</p>
@@ -151,7 +134,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           id="message"
           rows={4}
           {...register('message', { required: t.required })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-3 px-4"
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
@@ -162,7 +145,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50"
+          className="w-full rounded-md bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50"
         >
           {isSubmitting ? '...' : t.submit}
         </button>

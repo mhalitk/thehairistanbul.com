@@ -24,7 +24,7 @@ export default function ContactPage() {
             </div>
             <div className="flex justify-center gap-x-4">
               <dt className="font-semibold text-gray-900">Phone:</dt>
-              <dd>+90 XXX XXX XX XX</dd>
+              <dd>+90 541 951 99 65</dd>
             </div>
             <div className="flex justify-center gap-x-4">
               <dt className="font-semibold text-gray-900">Email:</dt>
