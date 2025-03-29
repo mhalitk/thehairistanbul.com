@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-lg font-semibold">The Hair Istanbul</h3>
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/logo.svg"
+                alt="The Hair Istanbul Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
+              <h3 className="text-lg font-semibold">The Hair Istanbul</h3>
+            </div>
             <p className="mt-4 text-sm text-gray-400">
               Professional hair transplant clinic in Istanbul, Turkey. Specializing in FUE and DHI methods.
             </p>
@@ -25,8 +35,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-sm text-gray-400 hover:text-white">
-                  Gallery
+                <Link href="/blog" className="text-sm text-gray-400 hover:text-white">
+                  Blog
                 </Link>
               </li>
               <li>

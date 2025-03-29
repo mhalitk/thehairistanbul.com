@@ -11,7 +11,6 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
-  { name: 'Gallery', href: '/gallery' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -20,7 +19,6 @@ const navigationRu = [
   { name: 'Главная', href: '/' },
   { name: 'Услуги', href: '/services' },
   { name: 'О нас', href: '/about' },
-  { name: 'Галерея', href: '/gallery' },
   { name: 'Блог', href: '/blog' },
   { name: 'Контакты', href: '/contact' },
 ];
