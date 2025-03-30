@@ -72,7 +72,7 @@
   }
 
   img {
-    @apply max-w-full h-auto rounded-lg my-6;
+    @apply max-w-full h-auto rounded-lg;
   }
 
   hr {
