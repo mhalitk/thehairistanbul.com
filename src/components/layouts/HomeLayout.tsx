@@ -173,7 +173,7 @@ export default function HomeLayout({ children, content, locale }: HomeLayoutProp
                   <h3 className="text-lg font-semibold leading-7 text-gray-900">{step.title}</h3>
                 </div>
                 <p className="mt-4 text-base leading-7 text-gray-600">{step.description}</p>
-                {step.title === "Online free consultation by video call" && (
+                {step.title === "Online free consultation by video call" || step.title === "Бесплатная онлайн-консультация по видеосвязи" && (
                   <div className="mt-6">
                     <button
                       onClick={() => setIsPopupOpen(true)}
