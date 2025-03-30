@@ -15,7 +15,7 @@ export default function Footer() {
                 height={40}
                 className="h-10 w-10"
               />
-              <h3 className="text-lg font-semibold">The Hair Istanbul</h3>
+              <span className="text-xl font-semibold text-[#D4AF37]">The Hair Istanbul</span>
             </div>
             <p className="mt-4 text-sm text-gray-400">
               Professional hair transplant clinic in Istanbul, Turkey. Specializing in FUE and DHI methods.
