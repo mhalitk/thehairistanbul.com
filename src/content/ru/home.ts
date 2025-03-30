@@ -15,17 +15,17 @@ export const homeContent = {
       {
         name: "Опытные хирурги",
         description: "Наша команда опытных хирургов выполнила тысячи успешных процедур.",
-        icon: "UserGroup"
+        icon: "UserGroup" as const
       },
       {
         name: "Передовые технологии",
         description: "Мы используем новейшие техники и оборудование для оптимальных результатов.",
-        icon: "ArrowPath"
+        icon: "ArrowPath" as const
       },
       {
         name: "Естественные результаты",
         description: "Наши процедуры разработаны для достижения естественного, постоянного результата.",
-        icon: "ClipboardDocumentCheck"
+        icon: "ClipboardDocumentCheck" as const
       }
     ]
   },
@@ -37,37 +37,37 @@ export const homeContent = {
       {
         title: "Бесплатная онлайн-консультация по видеосвязи",
         description: "Запланируйте бесплатную видеоконсультацию с нашими экспертами для обсуждения ваших целей и вариантов пересадки волос",
-        icon: "VideoCamera"
+        icon: "VideoCamera" as const
       },
       {
         title: "Бронирование отеля и авиабилетов",
         description: "Мы помогаем вам забронировать проживание и авиабилеты в Стамбул",
-        icon: "PaperAirplane"
+        icon: "PaperAirplane" as const
       },
       {
         title: "Трансфер из аэропорта в отель",
         description: "Наш профессиональный водитель встретит вас в аэропорту и отвезет в отель",
-        icon: "Truck"
+        icon: "Truck" as const
       },
       {
         title: "Процедура",
         description: "Получите комфортную и профессиональную процедуру пересадки волос в нашем современном центре",
-        icon: "UserGroup"
+        icon: "UserGroup" as const
       },
       {
         title: "Обзорная экскурсия по Стамбулу",
         description: "Насладитесь экскурсией по знаменитым достопримечательностям Стамбула во время периода восстановления",
-        icon: "Map"
+        icon: "Map" as const
       },
       {
         title: "Последующее наблюдение",
         description: "Получите подробные инструкции по послеоперационному уходу и регулярные консультации",
-        icon: "ClipboardDocumentCheck"
+        icon: "ClipboardDocumentCheck" as const
       },
       {
         title: "Трансфер из отеля в аэропорт",
         description: "Мы обеспечиваем комфортный отъезд с нашим сервисом трансфера в аэропорт",
-        icon: "Truck"
+        icon: "Truck" as const
       }
     ]
   }
