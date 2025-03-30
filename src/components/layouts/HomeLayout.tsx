@@ -163,28 +163,42 @@ export default function HomeLayout({ children, content, locale }: HomeLayoutProp
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {content.journey.steps.map((step, index) => (
-              <div key={step.title} className="flex flex-col">
-                <div className="flex items-center gap-x-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white">
-                    {index + 1}
+          {/* Timeline container */}
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-8 top-0 h-full w-0.5 bg-blue-200"></div>
+            
+            {/* Steps */}
+            <div className="relative space-y-16">
+              {content.journey.steps.map((step, index) => (
+                <div key={step.title} className="relative">
+                  {/* Step dot and number */}
+                  <div className="absolute left-0 -translate-x-1/2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white shadow-lg">
+                      {index + 1}
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold leading-7 text-gray-900">{step.title}</h3>
+                  
+                  {/* Step content */}
+                  <div className="ml-16">
+                    <h3 className="text-lg font-semibold leading-7 text-gray-900">{step.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-gray-600">{step.description}</p>
+                    
+                    {/* CTA Button for consultation step */}
+                    {(step.title === "Online free consultation by video call" || step.title === "Бесплатная онлайн-консультация по видеосвязи") && (
+                      <div className="mt-6">
+                        <button
+                          onClick={() => setIsPopupOpen(true)}
+                          className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        >
+                          {locale === 'en' ? 'Schedule Your Free Consultation' : 'Запланировать бесплатную консультацию'}
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <p className="mt-4 text-base leading-7 text-gray-600">{step.description}</p>
-                {(step.title === "Online free consultation by video call" || step.title === "Бесплатная онлайн-консультация по видеосвязи") && (
-                  <div className="mt-6">
-                    <button
-                      onClick={() => setIsPopupOpen(true)}
-                      className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                    >
-                      Schedule Your Free Consultation
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
