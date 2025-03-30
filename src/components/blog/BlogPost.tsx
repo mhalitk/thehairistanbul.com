@@ -15,7 +15,7 @@ export default function BlogPost({ post, locale, backToBlogText, notFoundTitle, 
     return (
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1>
             {notFoundTitle}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -61,7 +61,7 @@ export default function BlogPost({ post, locale, backToBlogText, notFoundTitle, 
                 {post.category}
               </span>
             </div>
-            <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h1>
               {post.title}
             </h1>
             <div className="mt-6 flex flex-wrap gap-2">
@@ -75,9 +75,10 @@ export default function BlogPost({ post, locale, backToBlogText, notFoundTitle, 
               ))}
             </div>
             <div
-              className="mt-8 prose prose-lg prose-blue mx-auto"
+              className="mt-8 prose prose-lg prose-blue mx-auto prose-headings:font-bold  prose-h3:text-2xl prose-p:text-gray-600 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-strong:font-semibold prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:text-gray-600 prose-blockquote:border-l-4 prose-blockquote:border-blue-200 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600 prose-code:text-gray-900 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-100 prose-pre:p-4 prose-pre:rounded-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
+            
             <div className="mt-10">
               <Link
                 href={`/${locale}/blog`}
