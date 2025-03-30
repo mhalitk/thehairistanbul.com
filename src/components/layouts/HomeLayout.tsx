@@ -1,5 +1,28 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
+import PhoneConsultationPopup from '../forms/PhoneConsultationPopup';
+import {
+  VideoCameraIcon,
+  PaperAirplaneIcon,
+  TruckIcon,
+  UserGroupIcon,
+  MapIcon,
+  ClipboardDocumentCheckIcon,
+  ArrowPathIcon,
+} from '@heroicons/react/24/outline';
+
+const iconMap = {
+  VideoCamera: VideoCameraIcon,
+  PaperAirplane: PaperAirplaneIcon,
+  Truck: TruckIcon,
+  UserGroup: UserGroupIcon,
+  Map: MapIcon,
+  ClipboardDocumentCheck: ClipboardDocumentCheckIcon,
+  ArrowPath: ArrowPathIcon,
+};
 
 interface HomeLayoutProps {
   children?: React.ReactNode;
@@ -17,13 +40,26 @@ interface HomeLayoutProps {
       items: Array<{
         name: string;
         description: string;
-        icon: React.ComponentType<React.ComponentProps<'svg'>>;
+        icon: keyof typeof iconMap;
+      }>;
+    };
+    journey: {
+      title: string;
+      subtitle: string;
+      description: string;
+      steps: Array<{
+        title: string;
+        description: string;
+        icon: keyof typeof iconMap;
       }>;
     };
   };
+  locale: 'en' | 'ru';
 }
 
-export default function HomeLayout({ children, content }: HomeLayoutProps) {
+export default function HomeLayout({ children, content, locale }: HomeLayoutProps) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <div className="bg-white">
       {/* Hero section */}
@@ -97,20 +133,67 @@ export default function HomeLayout({ children, content }: HomeLayoutProps) {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {content.features.items.map((feature) => (
-              <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                  <feature.icon className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
-                  {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p className="flex-auto">{feature.description}</p>
-                </dd>
-              </div>
-            ))}
+            {content.features.items.map((feature) => {
+              const Icon = iconMap[feature.icon];
+              return (
+                <div key={feature.name} className="flex flex-col">
+                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                    <Icon className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                    <p className="flex-auto">{feature.description}</p>
+                  </dd>
+                </div>
+              );
+            })}
           </dl>
         </div>
       </div>
+
+      {/* Journey section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-600">{content.journey.title}</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            {content.journey.subtitle}
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            {content.journey.description}
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            {content.journey.steps.map((step, index) => (
+              <div key={step.title} className="flex flex-col">
+                <div className="flex items-center gap-x-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-lg font-semibold leading-7 text-gray-900">{step.title}</h3>
+                </div>
+                <p className="mt-4 text-base leading-7 text-gray-600">{step.description}</p>
+                {step.title === "Online free consultation by video call" && (
+                  <div className="mt-6">
+                    <button
+                      onClick={() => setIsPopupOpen(true)}
+                      className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    >
+                      Schedule Your Free Consultation
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <PhoneConsultationPopup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        locale={locale}
+      />
     </div>
   );
 } 
