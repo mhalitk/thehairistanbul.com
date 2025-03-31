@@ -1,9 +1,8 @@
 ---
-id: '5'  
 title: 'What Is a Hair Transplant? Everything You Need to Know'  
 slug: 'what-is-hair-transplant'  
 excerpt: 'Curious about hair transplants? Learn everything you need to know about the procedure, types, eligibility, results, and how to get started on your hair restoration journey.'  
-date: '2025-03-30'  
+date: '2025-03-23'  
 category: 'Hair Transplant Basics'  
 imageUrl: '/img/blog/what-is-hair-transplant.png'  
 tags: ['Hair Transplant', 'FUE', 'DHI', 'Hair Loss Treatment', 'Medical Aesthetics']  

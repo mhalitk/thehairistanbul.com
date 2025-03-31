@@ -1,9 +1,8 @@
 ---
-id: '4' 
 title: 'What to Expect During Your Hair Transplant Recovery'  
 slug: 'hair-transplant-recovery-guide'  
 excerpt: 'A detailed guide on the hair transplant recovery process, including healing stages, aftercare tips, and a full recovery timeline to help you achieve the best results.'  
-date: '2025-03-15'  
+date: '2025-03-27'  
 category: 'Post-Procedure Care'  
 imageUrl: '/img/blog/hair-transplant-recovery-guide.png'  
 tags: ['Recovery', 'Aftercare', 'Hair Transplant', 'Healing Timeline']  

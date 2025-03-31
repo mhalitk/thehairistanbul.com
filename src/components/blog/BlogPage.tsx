@@ -24,7 +24,7 @@ export default function BlogPage({ posts, title, description, locale }: BlogPage
 
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
-            <article key={post.id} className="flex flex-col items-start">
+            <article key={post.slug} className="flex flex-col items-start">
               <div className="relative w-full">
                 <div className="relative mt-2 aspect-[16/9] w-full overflow-hidden rounded-lg bg-gray-100">
                   <Image
