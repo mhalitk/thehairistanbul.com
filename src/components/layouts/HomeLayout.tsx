@@ -162,20 +162,18 @@ export default function HomeLayout({ children, content, locale }: HomeLayoutProp
             {content.journey.description}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-5xl">
           {/* Timeline container */}
           <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 top-0 h-full w-0.5 bg-blue-200"></div>
             
             {/* Steps */}
-            <div className="relative space-y-16">
+            <div className="relative space-y-16 ">
               {content.journey.steps.map((step, index) => (
                 <div key={step.title} className="relative">
                   {/* Step dot and number */}
                   <div className="absolute left-0 -translate-x-1/2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white shadow-lg">
-                      {index + 1}
+                    <div className="flex h-8 w-8 items-center justify-center text-sm font-bold text-white ">
+                      <span className="text-blue-600 text-4xl">{index + 1}</span>
                     </div>
                   </div>
                   
@@ -185,7 +183,7 @@ export default function HomeLayout({ children, content, locale }: HomeLayoutProp
                     <p className="mt-4 text-base leading-7 text-gray-600">{step.description}</p>
                     
                     {/* CTA Button for consultation step */}
-                    {(step.title === "Online free consultation by video call" || step.title === "Бесплатная онлайн-консультация по видеосвязи") && (
+                    {(step.title === "Free Online Video Consultation" || step.title === "Бесплатная онлайн-консультация по видеосвязи") && (
                       <div className="mt-6">
                         <button
                           onClick={() => setIsPopupOpen(true)}
