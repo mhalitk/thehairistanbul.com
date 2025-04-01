@@ -14,6 +14,12 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return;
 
+  // For root path, serve the content directly with default locale
+  if (pathname === '/') {
+    request.nextUrl.pathname = `/${defaultLocale}`;
+    return NextResponse.rewrite(request.nextUrl);
+  }
+
   // Redirect if there is no locale
   const locale = defaultLocale;
   request.nextUrl.pathname = `/${locale}${pathname}`;
