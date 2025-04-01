@@ -1,4 +1,5 @@
 import { getAllBlogPosts } from '@/lib/blog';
 import type { BlogPost } from '@/types/blog';
 
-export const blogPosts: BlogPost[] = getAllBlogPosts('ru'); 
+// This is now just a placeholder since we're using getAllBlogPosts directly in the page component
+export const blogPosts: BlogPost[] = getAllBlogPosts('ru').posts; 

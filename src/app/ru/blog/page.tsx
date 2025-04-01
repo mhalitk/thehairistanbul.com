@@ -1,13 +1,29 @@
 import BlogPage from '@/components/blog/BlogPage';
-import { blogPosts } from '@/content/blog/ru';
+import { getAllBlogPosts } from '@/lib/blog';
 
-export default function Blog() {
+type PageProps = Promise<{
+  page?: string;
+  search?: string;
+}>;
+
+export default async function Blog({ searchParams }: { searchParams: PageProps }) {
+  const { page, search } = await searchParams;
+  const pageNumber = page ? parseInt(page) : 1;
+  const searchQuery = search || '';
+
+  const { posts, totalPosts, totalPages, currentPage } = getAllBlogPosts('ru', pageNumber, searchQuery);
+
   return (
     <BlogPage
-      posts={blogPosts}
+      posts={posts}
+      totalPosts={totalPosts}
+      totalPages={totalPages}
+      currentPage={currentPage}
       title="Блог"
       description="Читайте наши последние статьи о пересадке волос, методах и опыте пациентов."
       locale="ru"
+      searchPlaceholder="Поиск статей..."
+      noResultsText="Статьи по вашему запросу не найдены."
     />
   );
 } 
