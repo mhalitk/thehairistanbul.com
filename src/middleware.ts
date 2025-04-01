@@ -22,7 +22,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next|api|favicon.ico|logo.svg|before.jpeg|after.jpeg|manifest.json|web-app-manifest-192x192.png|web-app-manifest-512x512.png|img).*)',
+    // Skip all internal paths (_next) and special files
+    '/((?!_next|api|favicon.ico|logo.svg|before.jpeg|after.jpeg|manifest.json|web-app-manifest-192x192.png|web-app-manifest-512x512.png|img|sitemap.xml|robots.txt).*)',
   ],
 }; 
