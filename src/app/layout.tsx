@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "The Hair Istanbul | Professional Hair Transplant Clinic",
   description: "Professional hair transplant clinic in Istanbul, Turkey. Specializing in FUE and DHI methods with international patient care.",
+  verification: {
+    yandex: "84b281fea463dc5a"
+  }
 };
 
 export default function RootLayout({
