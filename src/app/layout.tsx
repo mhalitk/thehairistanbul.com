@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   description: "Professional hair transplant clinic in Istanbul, Turkey. Specializing in FUE and DHI methods with international patient care.",
   verification: {
     yandex: "84b281fea463dc5a"
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
   }
 };
 
