@@ -1,10 +1,10 @@
 ---
 title: "Является ли пересадка волос постоянной? Что говорит наука"
-slug: "yavlyaetsya-li-peresadka-volos-postoyannoy-chto-govorit-nauka"
+slug: "is-hair-transplant-permanent-what-science-says"
 excerpt: "Узнайте, является ли пересадка волос постоянной процедурой и что говорит наука об этом."
-date: 2022-03-05
-category: "Hair Transplant"
-imageUrl: "/img/blog/yavlyaetsya-li-peresadka-volos-postoyannoy-chto-govorit-nauka.png"
+date: 2025-04-02
+category: "Hair Transplant Basics"
+imageUrl: "/img/blog/is-hair-transplant-permanent-what-science-says.png"
 tags: ["Hair Transplant", "Science", "Hair Loss"]
 ---
 

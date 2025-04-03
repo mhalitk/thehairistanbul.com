@@ -2,8 +2,8 @@
 title: "Is Hair Transplant Permanent? What Science Says"
 slug: is-hair-transplant-permanent-what-science-says
 excerpt: Explore the science behind hair transplants and find out if the results are truly permanent. Understand the process, benefits, and possible risks.
-date: 2022-03-02
-category: blog
+date: 2025-04-02
+category: Hair Transplant Basics
 imageUrl: /img/blog/is-hair-transplant-permanent-what-science-says.png
 tags: [hair transplant, science, permanent]
 ---

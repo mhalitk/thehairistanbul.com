@@ -56,11 +56,17 @@ The blog should have basic html formatting, with h2 and h3 headings, and p tags 
 
 The blog should start with front matter, with the title, slug, excerpt, date, category, imageUrl, and tags.
 
-The slug should be the title in lowercase, with hyphens instead of spaces.
+The slug should be ${sanitizeSlug(title)}.
 
 The excerpt should be a short description of the blog post, 160 characters max.
 
-The image should be in /img/blog/{sanitizeSlug(title)}.png
+The image should be in /img/blog/${sanitizeSlug(title)}.png
+
+The date should be the ${new Date().toISOString().split('T')[0]} in the format YYYY-MM-DD.
+
+Find an appropriate category name for the blog post. Category name should capitalize the first letter of each word.
+
+Whatever the blog post language is, the clinic name is The Hair Istanbul and the website is thehairistanbul.com.
 `;
 
     const response = await client.chat.completions.create({
