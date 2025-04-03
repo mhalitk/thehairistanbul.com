@@ -34,12 +34,12 @@ export default function AboutPage({ content }: AboutPageProps) {
     <div className="bg-white">
       {/* Hero section */}
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-blue-100/20">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8">
+          <div className="mx-auto">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               {content.title}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-4 text-lg leading-8 text-gray-600">
               {content.description}
             </p>
           </div>
@@ -47,26 +47,26 @@ export default function AboutPage({ content }: AboutPageProps) {
       </div>
 
       {/* Mission section */}
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
+        <div className="mx-auto">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {content.mission.title}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             {content.mission.text}
           </p>
         </div>
       </div>
 
       {/* Stats section */}
-      <div className="bg-blue-50 py-24 sm:py-32">
+      <div className="bg-blue-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-4">
+          <div className="mx-auto">
+            <div className="grid grid-cols-1 gap-6 text-center lg:grid-cols-4">
               {content.stats.map((stat) => (
-                <div key={stat.label} className="mx-auto flex max-w-xs flex-col gap-y-4">
+                <div key={stat.label} className="mx-auto flex max-w-xs flex-col gap-y-2">
                   <dt className="text-base leading-7 text-gray-600">{stat.label}</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                     {stat.number}
                   </dd>
                 </div>
@@ -77,17 +77,17 @@ export default function AboutPage({ content }: AboutPageProps) {
       </div>
 
       {/* Why Us section */}
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8">
+        <div className="mx-auto">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {content.whyUs.title}
           </h2>
-          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {content.whyUs.points.map((point) => (
-              <div key={point.title} className="relative pl-16">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
+              <div key={point.title} className="relative pl-12">
+                <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
                   <svg
-                    className="h-6 w-6 text-white"
+                    className="h-5 w-5 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
@@ -116,19 +116,19 @@ export default function AboutPage({ content }: AboutPageProps) {
 
       {/* Facilities section */}
       <div className="bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8">
+          <div className="mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {content.facilities.title}
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-4 text-lg leading-8 text-gray-600">
               {content.facilities.description}
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
               {content.facilities.features.map((feature) => (
                 <div key={feature} className="flex gap-x-3">
                   <svg
-                    className="h-6 w-5 flex-none text-blue-600"
+                    className="h-5 w-5 flex-none text-blue-600"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
