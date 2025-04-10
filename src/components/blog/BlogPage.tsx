@@ -149,7 +149,7 @@ export default function BlogPage({
                     return (
                       <Link
                         key={page}
-                        href={`${window.location.pathname}?${searchParams.toString()}`}
+                        href={`/${locale}/blog?${searchParams.toString()}`}
                         className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
                           isActive
                             ? 'z-10 bg-blue-600 text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
