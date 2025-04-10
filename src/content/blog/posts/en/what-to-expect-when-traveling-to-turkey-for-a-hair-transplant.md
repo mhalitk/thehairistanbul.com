@@ -5,7 +5,7 @@ excerpt: Understand the process, benefits, and what to expect when traveling to 
 date: 2025-04-08
 category: Hair Transplantation
 imageUrl: /img/blog/what-to-expect-when-traveling-to-turkey-for-a-hair-transplant.png
-tags: Hair Transplant, Turkey, The Hair Istanbul, Travel
+tags: [Hair Transplant, Turkey, The Hair Istanbul, Travel]
 ---
 
 <h2>Introduction</h2>
