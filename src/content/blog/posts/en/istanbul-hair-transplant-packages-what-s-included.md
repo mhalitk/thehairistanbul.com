@@ -1,5 +1,5 @@
 ---
-title: Istanbul Hair Transplant Packages: What’s Included?
+title: "Istanbul Hair Transplant Packages: What’s Included?"
 slug: istanbul-hair-transplant-packages-what-s-included
 excerpt: Discover what's included in our comprehensive Istanbul hair transplant packages at The Hair Istanbul. 
 date: 2025-04-10
