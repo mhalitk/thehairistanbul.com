@@ -1,11 +1,11 @@
 ---
-title: Comparing Hair Transplant Costs: Turkey vs. UK, US, EU
+title: "Comparing Hair Transplant Costs: Turkey vs. UK, US, EU"
 slug: comparing-hair-transplant-costs-turkey-vs-uk-us-eu
 excerpt: This blog provides an in-depth comparison of hair transplant costs between Turkey, the UK, the US, and the EU, offering valuable insights to prospective patients.
 date: 2025-04-13
 category: Hair Transplantation
 imageUrl: /img/blog/comparing-hair-transplant-costs-turkey-vs-uk-us-eu.png
-tags: Hair Transplant, Cost Comparison, Turkey, UK, US, EU
+tags: [Hair Transplant, Cost Comparison, Turkey, UK, US, EU]
 ---
 
 <h2>Introduction</h2>
