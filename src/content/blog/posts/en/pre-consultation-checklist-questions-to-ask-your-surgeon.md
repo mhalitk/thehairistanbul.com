@@ -1,5 +1,5 @@
 ---
-title: Pre-Consultation Checklist: Questions to Ask Your Surgeon
+title: "Pre-Consultation Checklist: Questions to Ask Your Surgeon"
 slug: pre-consultation-checklist-questions-to-ask-your-surgeon
 excerpt: Equip yourself with essential questions to ask your hair transplant surgeon during pre-consultation. Navigate your journey towards a successful hair transplant with ease.
 date: 2025-04-20
