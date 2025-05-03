@@ -1,7 +1,7 @@
 ---
 title: "Скаббинг, зуд и заживление: управление восстановлением после трансплантации"
 slug: scabbing-itching-healing-managing-post-transplant-recovery
-excerpt: Блог посвящен процессу восстановления после трансплантации волос: как справиться со скаббингом, зудом и ускорить процесс заживления.
+excerpt: "Блог посвящен процессу восстановления после трансплантации волос: как справиться со скаббингом, зудом и ускорить процесс заживления."
 date: 2025-04-28
 category: Hair Transplant Recovery
 imageUrl: /img/blog/scabbing-itching-healing-managing-post-transplant-recovery.png
