@@ -27,6 +27,10 @@ export function getAllBlogPosts(
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    if (typeof data.tags === 'string') {
+      data.tags = data.tags.split(',').map((tag: string) => tag.trim());
+    }
+
     return {
       id: data.id,
       title: data.title,

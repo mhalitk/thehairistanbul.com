@@ -5,7 +5,7 @@ excerpt: Learn about the recovery timeline after a hair transplant and when can 
 date: 2025-05-02
 category: Hair Transplant
 imageUrl: /img/blog/when-can-you-return-to-work-after-hair-transplant.png
-tags: hair transplant, recovery, back to work, The Hair Istanbul
+tags: [hair transplant, recovery, back to work, The Hair Istanbul]
 ---
 
 <h2>Introduction</h2>

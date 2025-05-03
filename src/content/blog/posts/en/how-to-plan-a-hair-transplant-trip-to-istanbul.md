@@ -1,14 +1,11 @@
 ---
-title: How to Plan a Hair Transplant Trip to Istanbul
+title: "How to Plan a Hair Transplant Trip to Istanbul"
 slug: how-to-plan-a-hair-transplant-trip-to-istanbul
-excerpt: Discover the steps to plan a successful hair transplant trip to Istanbul with The Hair Istanbul, a leading hair transplant clinic in Turkey.
+excerpt: A comprehensive guide on planning your hair transplant trip to Istanbul, including travel arrangements, accommodation, and what to expect.
 date: 2025-04-09
 category: Hair Transplantation Guide
 imageUrl: /img/blog/how-to-plan-a-hair-transplant-trip-to-istanbul.png
-tags: 
-  - Hair Transplant
-  - Istanbul
-  - Travel Planning
+tags: ["Hair Transplant", "Istanbul", "Travel Planning", "Medical Tourism"]
 ---
 
 <h2>Introduction</h2>
